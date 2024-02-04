@@ -55,7 +55,7 @@ namespace CadastroClientePrimSem2017
             DateTime dtHoje;            // para receber a data e hora do sistema
             bool retorno = false;
 
-           
+
 
 
             do
@@ -69,20 +69,20 @@ namespace CadastroClientePrimSem2017
                 }
                 catch (Exception)
                 {
-                    
+
                     Console.WriteLine("Digite um valor valido!");
                 }
-                
+
             } while (nQtdeClientes < QTDE_MINIMA || nQtdeClientes > QTDE_MAXIMA);
-            int[] stVetCliente = new int [nQtdeClientes];
-            
+            int[] stVetCliente = new int[nQtdeClientes];
+
             for (i = 0; i < stVetCliente.Length; i++)
             {
                 nCodigoCliente = 0;
             }
 
-            
-            
+
+
             // pedir e dimensionar o vetor de clientes com
             //  uma quantidade válida e dar a opção de sair do programa
 
@@ -114,7 +114,7 @@ namespace CadastroClientePrimSem2017
                     case CADASTRAR_CLIENTE:
                         // ...
                         // pedir um código válido com caracteres válidos
-                        retorno = PedirUmCodigoValido( ref nCodigoCliente, nQtdeClientes, "Cadastrar cliente");
+                        retorno = PedirUmCodigoValido(ref nCodigoCliente, nQtdeClientes, "Cadastrar cliente");
                         if (retorno == false)
                             break;
                         // e dar a opção para zero (para cancelar)
@@ -171,7 +171,7 @@ namespace CadastroClientePrimSem2017
                         //      voltar ao menu
                         // Se o cliente existir, exibir os seus dados e
                         //      pedir a confirmação do operador
-                         
+
                         // Se disser não vai voltar ao menu
                         //  Se disser sim informar, no vetor, que o cliente
                         //      está inativo
@@ -184,8 +184,8 @@ namespace CadastroClientePrimSem2017
                         {
                             Console.WriteLine("Cliente não cadastrado");
                         }
-                            Console.WriteLine("Código: " + stCliente[nCodigoCliente -1].nCodigo + "Nome: " + stCliente[nCodigoCliente - 1].szNome + "Saldo: " + stCliente[nCodigoCliente - 1].dSaldo);
-                            Console.ReadKey();
+                        Console.WriteLine("Código: " + stCliente[nCodigoCliente - 1].nCodigo + "\nNome: " + stCliente[nCodigoCliente - 1].szNome + "\nSaldo: " + stCliente[nCodigoCliente - 1].dSaldo);
+                        Console.ReadKey();
                         // Pedir o código, cancelar a transação se assim foi
                         // informado, verificar se existe e se não existe
                         //  avisar ao operador
